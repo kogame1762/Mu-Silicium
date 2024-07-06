@@ -15,7 +15,7 @@
 ################################################################################
 [Defines]
   PLATFORM_NAME                  = a52sxq
-  PLATFORM_GUID                  = 04D1109C-6E8A-45DA-85C4-9D7FF2113B25
+  PLATFORM_GUID                  = CA95F38F-5A76-49A8-99C9-DFE75E711393
   PLATFORM_VERSION               = 0.1
   DSC_SPECIFICATION              = 0x00010005
   OUTPUT_DIRECTORY               = Build/a52sxqPkg
@@ -42,10 +42,11 @@
   DeviceConfigurationMapLib|a52sxqPkg/Library/DeviceConfigurationMapLib/DeviceConfigurationMapLib.inf
 
 [PcdsFixedAtBuild]
-  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x80000000 
+  # DDR Start Address
+  gArmTokenSpaceGuid.PcdSystemMemoryBase|0x80000000
 
   # Device Maintainer
-  gSiliciumPkgTokenSpaceGuid.PcdDeviceMaintainer|"arminask" # Device Maintainer
+  gSiliciumPkgTokenSpaceGuid.PcdDeviceMaintainer|"arminask & CloudSweets"
 
   # CPU Vector Address
   gArmTokenSpaceGuid.PcdCpuVectorBaseAddress|0x9FF8C000
@@ -56,7 +57,7 @@
 
   # SmBios
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemVendor|"Samsung"
-  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemModel|"Samsung Galaxy A52s 5G"
+  gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemModel|"Galaxy A52s 5G"
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailModel|"a52sxq"
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosSystemRetailSku|"Galaxy_A52s_5G_a52sxq"
   gSiliciumPkgTokenSpaceGuid.PcdSmbiosBoardModel|"Galaxy A52s 5G"
@@ -66,17 +67,17 @@
   gSiliciumPkgTokenSpaceGuid.PcdMipiFrameBufferHeight|2400
   gSiliciumPkgTokenSpaceGuid.PcdMipiFrameBufferColorDepth|32
 
-  # XBL Protocol (Keep it disabled for now)
-  #gQcomPkgTokenSpaceGuid.PcdScheduleInterfaceAddr|0x9FC37980
+  # XBL Protocols
+  gQcomPkgTokenSpaceGuid.PcdScheduleInterfaceAddr|0x9FC37980
 
   # Dynamic RAM Start Address
-  gQcomPkgTokenSpaceGuid.PcdRamPartitionBase|0xF0900000
+  gQcomPkgTokenSpaceGuid.PcdRamPartitionBase|0xE4B00000
 
   # SD Card Slot
   gQcomPkgTokenSpaceGuid.PcdInitCardSlot|TRUE
 
   # USB Controller
-  gQcomPkgTokenSpaceGuid.PcdStartUsbController|TRUE
+  gQcomPkgTokenSpaceGuid.PcdStartUsbController|FALSE
 
 [PcdsDynamicDefault]
   gEfiMdeModulePkgTokenSpaceGuid.PcdVideoHorizontalResolution|1080

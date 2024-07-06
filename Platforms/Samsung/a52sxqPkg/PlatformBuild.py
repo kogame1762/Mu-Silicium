@@ -38,9 +38,7 @@ class CommonPlatform ():
         "Mu_Basecore",
         "Silicon/Arm/Mu_Tiano",
         "Silicon/Qualcomm",
-        "Silicon/Silicium",
-        "Silicium-ACPI/Platforms/Samsung",
-        "Silicium-ACPI/SoCs/Qualcomm"
+        "Silicon/Silicium"
     )
 
 # ####################################################################################### #
@@ -66,7 +64,7 @@ class SettingsManager (UpdateSettingsManager, SetupSettingsManager, PrEvalSettin
             RequiredSubmodule ("Features/DFCI", True),
             RequiredSubmodule ("Mu_Basecore", True),
             RequiredSubmodule ("Silicon/Arm/Mu_Tiano", True),
-            RequiredSubmodule ("Silicium-ACPI", True),
+            # RequiredSubmodule ("Silicium-ACPI", False),
         ]
 
     def SetArchitectures (self, list_of_requested_architectures):
